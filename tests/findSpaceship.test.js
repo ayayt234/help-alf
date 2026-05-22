@@ -11,3 +11,8 @@ test('should return [0, 0] if the map only contains X', () => {
 test('should return correct coordinates for a single-line map with offset', () => {
     expect(findSpaceship('....X')).toEqual([4, 0]);
 });
+
+test('should return correct coordinates for a multiline map', () => {
+    const map = "........\n..X.....\n........";
+    expect(findSpaceship(map)).toEqual([2, 1]);
+});
